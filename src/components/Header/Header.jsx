@@ -6,7 +6,7 @@ import { useNavigate, Link } from "react-router-dom";
 const Header = () => {
   const authStatus = useSelector((state) => state.auth.status);
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const navItems = [
     {
@@ -41,8 +41,9 @@ const Header = () => {
       <Container>
         <nav className="flex">
           <div className="mr-4">
-    
-     
+            <Link to="/">
+              <Logo />
+            </Link>
           </div>
           <ul className="flex ml-auto">
             {navItems.map((item) =>
